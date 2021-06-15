@@ -7,6 +7,8 @@ const dbConnection = require("./db")
 //     res.send("This is a message from the test endpoint on the server!");
 // });
 
+app.use(require("./middleware/headers"));
+
 const controllers = require("./controllers");
 
 app.use(Express.json());
